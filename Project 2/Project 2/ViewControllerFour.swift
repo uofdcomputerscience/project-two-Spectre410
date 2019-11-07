@@ -14,6 +14,7 @@ class ViewControllerFour: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var continueFour: UIButton!
     var selectedValue: String = ""
+    var expectedCapital: String = ""
     struct State {
         let name: String
         let capital: String
@@ -77,16 +78,9 @@ class ViewControllerFour: UIViewController {
         ]
     }
     
-    @IBAction func textFieldChanged(_ sender: Any) {
-        var i = 0
-        while true {
-            if selectedValue == states[i].name {
-                if textField.text?.lowercased() == states[i].capital.lowercased() {
-                    continueFour.isEnabled = true
-                    break
-                }
-            }
-            i = i + 1
+    @IBAction func textFieldEditted(_ sender: Any) {
+        if textField.text == expectedCapital{
+            continueFour.isEnabled = true
         }
     }
 }
@@ -94,6 +88,7 @@ class ViewControllerFour: UIViewController {
 extension ViewControllerFour: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedValue = states[row].name
+        expectedCapital = states[row].capital
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return states[row].name

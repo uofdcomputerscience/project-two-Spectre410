@@ -323,15 +323,13 @@
                             <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZKz-lR-5Ma">
                                 <rect key="frame" x="0.0" y="197" width="414" height="216"/>
                             </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6y9-tJ-Sff">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6y9-tJ-Sff">
                                 <rect key="frame" x="120" y="421" width="162" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="editing:" destination="i0b-E8-PCm" eventType="editingDidEnd" id="7pJ-Qo-dBE"/>
-                                    <action selector="textFieldChangeEnded:" destination="i0b-E8-PCm" eventType="editingDidEnd" id="mTW-sv-ByL"/>
-                                    <action selector="textFieldChanged:" destination="i0b-E8-PCm" eventType="valueChanged" id="A85-EA-1sk"/>
+                                    <action selector="textFieldEditted:" destination="i0b-E8-PCm" eventType="editingChanged" id="x4G-qX-0Qc"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l90-Sx-ml1">
